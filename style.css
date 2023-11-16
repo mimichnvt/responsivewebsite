@@ -131,3 +131,92 @@ section{
     transform: scale(1.5);
     color: #fff;
 }
+
+.right{
+    width:55%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height:100%;
+}
+.right img{
+    height:100%;
+    width:100%;
+}
+/*responsive*/
+
+@media (max-width:904px){
+    header{
+        padding:0 5%;
+    }
+    header .menu{
+        display:none;
+    }
+    section{
+        margin-top: 100px;
+        flex-direction: column;
+    }
+    section .left, section .right{
+        width:100%
+    }
+    .toggle-menu{
+        width:50px;
+        height:50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        z-index: 1;
+    }
+    .toggle-menu::before{
+        position: absolute;
+        content: "";
+        height:5px;
+        width:25px;
+        background-color: #fff;
+        border-radius: 6px;
+        box-shadow: 0 10px 0 #fff;
+
+        transform: translateY(-10px);
+        transition: 0.5s;
+    }
+    .toggle-menu.active::before{
+        transform: translateY(0) rotate(-45deg);
+        box-shadow: 0 0px 0 #fff;
+
+
+    }
+    .toggle-menu.active::after{
+        transform: translateY(0) rotate(45deg);
+        
+
+    }
+
+    .toggle-menu::after{
+        position: absolute;
+        content: "";
+        height:5px;
+        width:25px;
+        background-color: #fff;
+        border-radius: 6px;
+        transform: translateY(10px);
+        transition: 0.5s;
+    }
+    header .menu.responsive{
+        display: flex;
+        position: absolute;
+        top:0;
+        left:0;
+        background-color: #191513;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+    }
+    header .menu.responsive li {
+        margin: 25px 0;
+    }
+}

@@ -13,6 +13,9 @@
         <div class="logo">
             <h1><span>.STOR</span>ME</h1>
         </div>
+
+        <div class="toggle-menu"></div>
+
         <ul class="menu">
                 <li><a href="#">Film</a></li>
                 <li><a href="#">Serie</a></li>
@@ -41,6 +44,17 @@
             <img src="images/img.png" alt="">
         </div>
     </section>
+
+    <script>
+        var menu = document.querySelector('.menu');
+        var toggle_menu = document.querySelector('.toggle-menu');
+        toggle_menu.onclick= function (){
+            toggle_menu.classList.toggle('active');
+            menu.classList.toggle('responsive');
+        }
+
+
+    </script>
     
 </body>
 </html>
